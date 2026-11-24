@@ -18,7 +18,7 @@
   "lanG": 2.5,
   "oculink": false,
   "usb4": true,
-  "temp": 67,
+  "temp": null,
   "uses": [],
   "avail": null,
   "bench": {
@@ -32,8 +32,8 @@
    "cdm_w": 1769,
    "mem_r": 45.4
   },
-  "sumRu": "Компактный мини-ПК на новом Intel Core 3 304 (Wildcat Lake, техпроцесс 18A) с USB4 и сетью 2,5 GbE.",
-  "sumEn": "Compact mini PC on the new Intel Core 3 304 (Wildcat Lake, 18A process) with USB4 and 2.5 GbE.",
+  "sumRu": "У версии из обзора есть USB4 и сеть 2,5 Гбит/с. В стресс-тесте 67 °C указаны для датчика на плате. Отдельного значения температуры процессора в карточке пока нет.",
+  "sumEn": "The reviewed unit has USB4 and 2.5 Gbit/s Ethernet. The 67 °C reported in the stress test came from a board sensor. A separate CPU temperature result is unavailable in the catalog.",
   "reviews": [
    {
     "title": "Обзор Ninkear MBOX18 на Intel Core 3 304: производительность, тесты, охлаждение",
@@ -66,7 +66,7 @@
   "lanG": 2.5,
   "oculink": false,
   "usb4": true,
-  "temp": 85,
+  "temp": null,
   "uses": [],
   "avail": null,
   "bench": {
@@ -75,8 +75,8 @@
    "cdm_r": 1800,
    "cdm_w": 1400
   },
-  "sumRu": "Мини-ПК на Lunar Lake (Core Ultra 5 226V) с NPU 40 TOPS и распаянной памятью LPDDR5X. Образец был предсерийный.",
-  "sumEn": "Lunar Lake mini PC (Core Ultra 5 226V) with a 40 TOPS NPU and soldered LPDDR5X. The sample was pre-production.",
+  "sumRu": "В обзоре тестировали предсерийный L20 с 16 ГБ распаянной памяти. В коротком стресс-тесте AIDA64 температура процессора держалась в районе 80–90 °C. Лимиты мощности у серийной версии могут отличаться.",
+  "sumEn": "The review tested a pre-production L20 with 16 GB of soldered RAM. In a short AIDA64 stress test, CPU temperature was around 80–90 °C. The retail version may use different power limits.",
   "reviews": [
    {
     "title": "Первые тесты нового мини-ПК Ninkear L20 (226V, Lunar Lake)",
@@ -101,7 +101,7 @@
   "ramType": "LPDDR4",
   "ramSoldered": true,
   "ssd": 2,
-  "storage": "512 GB SATA SSD, два слота M.2",
+  "storage": "512 GB SATA SSD",
   "tdp": 15,
   "lan": "",
   "oculink": false,
@@ -113,8 +113,8 @@
    "pm_total": 1973,
    "pcmark10": 4319
   },
-  "sumRu": "Бюджетный мини-ПК на Ryzen 3 4300U вместо N100: два слота M.2, но распаянная LPDDR4.",
-  "sumEn": "Budget mini PC on the Ryzen 3 4300U instead of an N100: two M.2 slots, but soldered LPDDR4.",
+  "sumRu": "У этой конфигурации 16 ГБ распаянной памяти и два слота M.2. В обзоре есть баллы PassMark и PCMark 10.",
+  "sumEn": "This configuration has 16 GB of soldered RAM and two M.2 slots. The review includes PassMark and PCMark 10 results.",
   "reviews": [
    {
     "title": "Обзор мини-ПК Firebat R3: Ryzen 3 4300U вместо N100",
@@ -150,8 +150,8 @@
   "uses": [],
   "avail": null,
   "bench": {},
-  "sumRu": "Металлический мини-ПК на Ryzen 5 7430U: память DDR4 в двух слотах SO-DIMM расширяется до 64 ГБ, слот SSD один.",
-  "sumEn": "All-metal mini PC on the Ryzen 5 7430U: DDR4 in two SO-DIMM slots upgradable to 64 GB, one SSD slot.",
+  "sumRu": "Память можно расширить до 64 ГБ, под SSD есть один слот M.2. В обзоре указано около 68 °C в среднем в одном из стресс-тестов, а также короткие всплески температуры. Баллов бенчмарков в карточке пока нет.",
+  "sumEn": "RAM can be expanded to 64 GB, and there is one M.2 SSD slot. The review reports about 68 °C on average in one stress test, along with brief temperature spikes. Benchmark scores have yet to be added to the card.",
   "reviews": [
    {
     "title": "Обзор мини-ПК Ninkear M7: железное преимущество",
@@ -179,7 +179,7 @@
   "ssd": 2,
   "storage": "512 GB NVMe M.2 2280",
   "tdp": 45,
-  "lan": "2.5 GbE (по спецификации)",
+  "lan": "2.5 GbE",
   "lanG": 2.5,
   "oculink": false,
   "usb4": false,
@@ -195,8 +195,8 @@
    "cdm_r": 3395,
    "cdm_w": 2000
   },
-  "sumRu": "Бюджетный мини-ПК на Ryzen 5 6600H: сменная DDR5 и два слота M.2, но под нагрузкой сильно греется.",
-  "sumEn": "Budget mini PC on the Ryzen 5 6600H: upgradable DDR5 and two M.2 slots, but it runs hot under load.",
+  "sumRu": "Два слота M.2 и возможность расширить память до 64 ГБ. В стресс-тесте AIDA64 процессор нагрелся до 95 °C. В обзоре есть результаты и для другой нагрузки.",
+  "sumEn": "Two M.2 slots and memory expandable to 64 GB. The CPU reached 95 °C in AIDA64. The review also shows results for a different workload.",
   "reviews": [
    {
     "title": "Обзор мини-ПК Firebat AM02: когда бюджетно не означает плохо",
@@ -243,8 +243,8 @@
    "llm": 38,
    "cb23": 34000
   },
-  "sumRu": "Демо-устройство, чтобы показать страницу ИИ-мини-ПК.",
-  "sumEn": "Demo device to preview the AI mini PC page.",
+  "sumRu": "Пример карточки с видеопамятью и скоростью генерации текста. Характеристики и результаты условные.",
+  "sumEn": "A sample card showing graphics memory and text generation speed. The specs and results are illustrative.",
   "status": "published",
   "benchSrc": {},
   "lanPorts": 1
@@ -262,7 +262,7 @@
   "ramSoldered": false,
   "ramMax": 32,
   "ssd": 2,
-  "storage": "4 отсека",
+  "storage": "",
   "bays": 4,
   "tdp": 15,
   "temp": 58,
@@ -278,8 +278,8 @@
    "pm_total": 2300,
    "pm_cpu": 5500
   },
-  "sumRu": "Демо-NAS для проверки страницы NAS.",
-  "sumEn": "Demo NAS to preview the NAS page.",
+  "sumRu": "Пример сетевого хранилища с четырьмя отсеками. Характеристики и результаты условные.",
+  "sumEn": "An example of a four-bay network storage device. The specs and results are illustrative.",
   "status": "published",
   "benchSrc": {},
   "lanPorts": 2
@@ -297,7 +297,7 @@
   "ramSoldered": false,
   "ramMax": 96,
   "ssd": 3,
-  "storage": "6 отсеков",
+  "storage": "",
   "bays": 6,
   "tdp": 35,
   "temp": 64,
@@ -314,8 +314,8 @@
    "pm_cpu": 20000,
    "sn_light": 1500
   },
-  "sumRu": "Демо-NAS побольше.",
-  "sumEn": "A larger demo NAS.",
+  "sumRu": "Пример сетевого хранилища с шестью отсеками. Характеристики и результаты условные.",
+  "sumEn": "An example of a six-bay network storage device. The specs and results are illustrative.",
   "status": "published",
   "benchSrc": {},
   "lanPorts": 2
