@@ -1,0 +1,1151 @@
+{
+ "uses": [
+  {
+   "key": "school",
+   "ru": "Школьнику",
+   "en": "For school",
+   "descRu": "Дёшево, надёжно, не греется",
+   "descEn": "Cheap, reliable, runs cool",
+   "icon": "school",
+   "h1Ru": "Мини-ПК для школьника",
+   "h1En": "Mini PC for a school student",
+   "whyRu": "Школьнику нужны браузер, онлайн-уроки, документы и лёгкие игры. Главное здесь цена, надёжность и холодная работа, а мощность вторична. От студента отличается тем, что не нужен запас памяти под виртуальные машины и код, а от пенсионера тем, что допустимы игры и более сложные задачи.",
+   "whyEn": "A school student needs a browser, online lessons, documents and light games. Price, reliability and cool running matter most, raw power much less. Unlike a university student there is no need for extra memory for virtual machines and code, and unlike a senior user games and heavier tasks are fine.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 28
+    }
+   ],
+   "pref": [
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    }
+   ],
+   "rank": {
+    "value": 0.4,
+    "cool": 0.25,
+    "perf": 0.2,
+    "avail": 0.15
+   }
+  },
+  {
+   "key": "office",
+   "ru": "Офис и дом",
+   "en": "Home and office",
+   "descRu": "Документы, браузер, видеозвонки",
+   "descEn": "Documents, browser, video calls",
+   "icon": "screen",
+   "h1Ru": "Мини-ПК для офиса и дома",
+   "h1En": "Mini PC for home and office",
+   "whyRu": "Документы, почта, браузер с десятком вкладок и видеозвонки. Нужны 8 ГБ памяти и прохладная работа, особенно если устройство стоит на столе. От школьника отличается ожиданием долгой работы без сбоев и запасом в 16 ГБ, от студента отсутствием виртуальных машин и тяжёлых программ.",
+   "whyEn": "Documents, mail, a browser with a dozen tabs and video calls. You need 8 GB of memory and cool running, especially on a desk. Unlike school use it expects long trouble-free work and 16 GB of headroom, unlike a student there are no virtual machines or heavy programs.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 35
+    }
+   ],
+   "pref": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 16
+    },
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 75
+    }
+   ],
+   "rank": {
+    "cool": 0.3,
+    "eff": 0.2,
+    "value": 0.2,
+    "perf": 0.2,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "student",
+   "ru": "Студенту",
+   "en": "For students",
+   "descRu": "Учёба, код, лёгкий монтаж",
+   "descEn": "Study, coding, light editing",
+   "icon": "book",
+   "h1Ru": "Мини-ПК для студента",
+   "h1En": "Mini PC for a university student",
+   "whyRu": "Учёба, программирование, браузер с кучей вкладок, иногда виртуальная машина или лёгкий монтаж. Здесь важны 16 ГБ памяти, лучше расширяемой, и достаточный процессор. От офисного работника студента отличают задачи, которым нужны память и процессор, а от домашнего сервера нет требования работать круглосуточно.",
+   "whyEn": "Study, programming, a browser with many tabs, sometimes a virtual machine or light editing. 16 GB of memory, ideally upgradable, and a capable CPU matter here. Unlike an office worker a student runs tasks that need memory and CPU, unlike a home server there is no 24/7 requirement.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 16
+    },
+    {
+     "f": "s.perf",
+     "op": ">=",
+     "v": 20
+    }
+   ],
+   "pref": [
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 2
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 85
+    }
+   ],
+   "rank": {
+    "perf": 0.35,
+    "value": 0.3,
+    "cool": 0.15,
+    "gfx": 0.1,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "gaming",
+   "ru": "Игры",
+   "en": "Gaming",
+   "descRu": "Сильная графика или eGPU",
+   "descEn": "Strong graphics or an eGPU",
+   "icon": "game",
+   "h1Ru": "Мини-ПК для игр",
+   "h1En": "Mini PC for gaming",
+   "whyRu": "В играх решает графика: сильное встроенное видеоядро или подключение внешней видеокарты. Нужны быстрая память (DDR5 или LPDDR5X) и хорошее охлаждение, иначе производительность проседает. Офисному мини-ПК это не требуется, поэтому для игр подходят только устройства с высоким баллом графики.",
+   "whyEn": "Graphics decide games: a strong integrated GPU or an external graphics card. You need fast memory (DDR5 or LPDDR5X) and good cooling, otherwise performance drops. An office mini PC does not need this, so only devices with a high graphics score fit gaming.",
+   "req": [
+    {
+     "f": "s.gfx",
+     "op": ">=",
+     "v": 40
+    },
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 16
+    }
+   ],
+   "pref": [
+    {
+     "f": "egpu",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 85
+    },
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    }
+   ],
+   "rank": {
+    "gfx": 0.45,
+    "perf": 0.25,
+    "cool": 0.15,
+    "value": 0.15
+   }
+  },
+  {
+   "key": "multimedia",
+   "ru": "Мультимедиа",
+   "en": "Multimedia",
+   "descRu": "4K-видео, фото, музыка",
+   "descEn": "4K video, photos, music",
+   "icon": "play",
+   "h1Ru": "Мини-ПК для мультимедиа",
+   "h1En": "Mini PC for multimedia",
+   "whyRu": "Просмотр 4K-видео, стриминг, обработка фото, музыка. Важны хорошее видеоядро для декодирования и прохладная работа, мощный процессор не нужен. От медиаприставки отличается тем, что это полноценный компьютер для работы с файлами и фото, а не только плеер для телевизора.",
+   "whyEn": "Watching 4K video, streaming, photo editing, music. A decent GPU for decoding and cool running matter, a powerful CPU does not. Unlike a media box it is a full computer for files and photos, not just a player for a TV.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 45
+    }
+   ],
+   "pref": [
+    {
+     "f": "s.gfx",
+     "op": ">=",
+     "v": 20
+    },
+    {
+     "f": "usb4",
+     "op": "==",
+     "v": true
+    }
+   ],
+   "rank": {
+    "gfx": 0.3,
+    "cool": 0.3,
+    "eff": 0.2,
+    "value": 0.2
+   }
+  },
+  {
+   "key": "retro",
+   "ru": "Ретроконсоль",
+   "en": "Retro console",
+   "descRu": "Эмуляторы от NES до PS2 и Switch",
+   "descEn": "Emulators from NES to PS2 and Switch",
+   "icon": "game",
+   "h1Ru": "Мини-ПК для ретро-эмуляции",
+   "h1En": "Mini PC for retro emulation",
+   "whyRu": "Эмуляторы (RetroArch, Batocera) старых консолей идут на любом мини-ПК. PS2, GameCube, Wii и Switch требуют сильного процессора и видеоядра. Чем новее консоль, тем выше требования, поэтому мы смотрим на баллы CPU и графики. Нужен компактный и холодный корпус для телевизора.",
+   "whyEn": "Emulators (RetroArch, Batocera) for old consoles run on almost any mini PC. PS2, GameCube, Wii and Switch need a strong CPU and GPU. The newer the console, the higher the demands, so we look at CPU and graphics scores. A compact, cool case for the TV helps.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    },
+    {
+     "f": "s.perf",
+     "op": ">=",
+     "v": 15
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 45
+    }
+   ],
+   "pref": [
+    {
+     "f": "s.gfx",
+     "op": ">=",
+     "v": 25
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 80
+    }
+   ],
+   "rank": {
+    "gfx": 0.35,
+    "perf": 0.3,
+    "value": 0.2,
+    "cool": 0.15
+   }
+  },
+  {
+   "key": "ai",
+   "ru": "Локальный ИИ",
+   "en": "Local AI",
+   "descRu": "Своя нейросеть и ИИ-агент",
+   "descEn": "Your own model and AI agent",
+   "icon": "ai",
+   "h1Ru": "Мини-ПК для локального ИИ",
+   "h1En": "Mini PC for local AI",
+   "whyRu": "Модель живёт в памяти: чем она больше, тем больше нужно ОЗУ или видеопамяти. Для серьёзных моделей нужно от 32 ГБ быстрой памяти, а скорость генерации зависит от пропускной способности памяти и видеоядра. Игровому или офисному ПК столько памяти не нужно, поэтому здесь важны объём и скорость LLM, а не балл CPU.",
+   "whyEn": "A model lives in memory: the bigger it is, the more RAM or video memory it needs. Serious models need 32 GB or more of fast memory, and generation speed depends on memory bandwidth and the GPU. A gaming or office PC does not need that much, so volume and LLM speed matter here, not the CPU score.",
+   "req": [
+    {
+     "f": "aimem",
+     "op": ">=",
+     "v": 32
+    }
+   ],
+   "pref": [
+    {
+     "f": "npu",
+     "op": ">=",
+     "v": 40
+    },
+    {
+     "f": "s.ai",
+     "op": ">=",
+     "v": 50
+    }
+   ],
+   "rank": {
+    "ai": 0.5,
+    "perf": 0.15,
+    "eff": 0.15,
+    "value": 0.2
+   },
+   "page": "ai"
+  },
+  {
+   "key": "mediabox",
+   "ru": "Медиаприставка",
+   "en": "Media box",
+   "descRu": "Для телевизора: Kodi, Plex, YouTube",
+   "descEn": "For the TV: Kodi, Plex, YouTube",
+   "icon": "play",
+   "h1Ru": "Мини-ПК как медиаприставка",
+   "h1En": "Mini PC as a media box",
+   "whyRu": "Подключается к телевизору и воспроизводит видео по сети и из интернета. Нужен холодный компактный корпус с низким TDP, слабого процессора достаточно. От мультимедийного мини-ПК отличается тем, что не нужна мощность для работы с фото и файлами, поэтому критерии мягче, а упор на холодную и экономичную работу.",
+   "whyEn": "Connects to a TV and plays video from the network and the internet. A cool compact case with low TDP is needed, a weak CPU is enough. Unlike a multimedia mini PC it does not need power for photos and files, so criteria are softer and focus on cool, efficient operation.",
+   "req": [
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 28
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 80
+    }
+   ],
+   "pref": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    }
+   ],
+   "rank": {
+    "cool": 0.35,
+    "eff": 0.3,
+    "value": 0.25,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "homeserver",
+   "ru": "Домашний сервер",
+   "en": "Home server",
+   "descRu": "Работает 24/7 и мало потребляет",
+   "descEn": "Runs 24/7 on little power",
+   "icon": "server",
+   "h1Ru": "Мини-ПК для домашнего сервера",
+   "h1En": "Mini PC for a home server",
+   "whyRu": "Работает круглосуточно: Docker, Home Assistant, Jellyfin, файлы и резервные копии. Главные критерии: низкий TDP (счёт за электричество), прохладная работа и расширяемая память. От студента отличается упором на 24/7 и экономичность, от Homelab нет потребности в большом объёме памяти и нескольких сетевых портах.",
+   "whyEn": "Runs around the clock: Docker, Home Assistant, Jellyfin, files and backups. Key criteria: low TDP (electricity bill), cool running and upgradable memory. Unlike a student it focuses on 24/7 and efficiency, unlike a Homelab it does not need lots of memory or several network ports.",
+   "req": [
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 45
+    },
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    },
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 1
+    }
+   ],
+   "pref": [
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "lanG",
+     "op": ">=",
+     "v": 2.5
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 75
+    }
+   ],
+   "rank": {
+    "eff": 0.35,
+    "cool": 0.25,
+    "value": 0.2,
+    "perf": 0.1,
+    "avail": 0.1
+   },
+   "nasOk": true
+  },
+  {
+   "key": "nas_replace",
+   "ru": "Замена NAS",
+   "en": "NAS replacement",
+   "descRu": "Мини-ПК с двумя M.2 вместо хранилища",
+   "descEn": "A mini PC with two M.2 slots instead of storage",
+   "icon": "nas",
+   "h1Ru": "Мини-ПК вместо NAS",
+   "h1En": "Mini PC instead of a NAS",
+   "whyRu": "Небольшое хранилище на NVMe SSD в слотах M.2 вместо корзин с дисками: тише, быстрее и экономнее. Подходит, если нужно 2 до 8 ТБ, а не десятки. Нужны минимум два слота под SSD и сеть от 2,5 Гбит/с. Настоящий NAS лучше, когда дисков много и нужна горячая замена.",
+   "whyEn": "A small NVMe storage in M.2 slots instead of disk bays: quieter, faster and more economical. Good when you need 2 to 8 TB, not dozens. You need at least two SSD slots and a 2.5 Gbit/s network. A real NAS is better with many disks and hot swap.",
+   "req": [
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 2
+    },
+    {
+     "f": "lanG",
+     "op": ">=",
+     "v": 2.5
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 35
+    }
+   ],
+   "pref": [
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 75
+    }
+   ],
+   "rank": {
+    "eff": 0.35,
+    "cool": 0.25,
+    "value": 0.2,
+    "avail": 0.1,
+    "perf": 0.1
+   }
+  },
+  {
+   "key": "nas",
+   "ru": "NAS",
+   "en": "NAS",
+   "descRu": "Хранилище с отсеками для дисков",
+   "descEn": "Storage with drive bays",
+   "icon": "nas",
+   "h1Ru": "NAS и домашние хранилища",
+   "h1En": "NAS and home storage",
+   "whyRu": "Отдельное устройство с корзинами под жёсткие диски: много дисков, горячая замена, RAID. Главное число отсеков, сеть от 2,5 Гбит/с и низкий TDP. От мини-ПК вместо NAS отличается ёмкостью и удобной заменой дисков.",
+   "whyEn": "A dedicated device with drive bays: many disks, hot swap, RAID. What matters is the bay count, a 2.5 Gbit/s network and low TDP. Unlike a mini PC replacing a NAS it offers capacity and easy disk swaps.",
+   "req": [
+    {
+     "f": "nas",
+     "op": "==",
+     "v": true
+    }
+   ],
+   "pref": [
+    {
+     "f": "lanG",
+     "op": ">=",
+     "v": 2.5
+    },
+    {
+     "f": "bays",
+     "op": ">=",
+     "v": 4
+    }
+   ],
+   "rank": {
+    "eff": 0.4,
+    "cool": 0.3,
+    "value": 0.2,
+    "avail": 0.1
+   },
+   "page": "nas",
+   "nasOk": true
+  },
+  {
+   "key": "homelab",
+   "ru": "Homelab",
+   "en": "Homelab",
+   "descRu": "Виртуалки, Proxmox, Kubernetes",
+   "descEn": "VMs, Proxmox, Kubernetes",
+   "icon": "lab",
+   "h1Ru": "Мини-ПК для Homelab",
+   "h1En": "Mini PC for a Homelab",
+   "whyRu": "Виртуальные машины, Proxmox, Kubernetes, тестовые стенды. Нужны много ОЗУ (от 64 ГБ с учётом расширения), несколько слотов SSD и быстрая сеть 2,5 Гбит/с. Студенту хватает 16 ГБ и одного SSD, домашнему серверу 8 до 16 ГБ, поэтому Homelab требует именно запаса и расширяемости.",
+   "whyEn": "Virtual machines, Proxmox, Kubernetes, test beds. You need lots of RAM (64 GB or more counting upgrades), several SSD slots and a fast 2.5 Gbit/s network. A student gets by with 16 GB and one SSD, a home server with 8 to 16 GB, so a Homelab demands headroom and expandability.",
+   "req": [
+    {
+     "f": "ramcap",
+     "op": ">=",
+     "v": 64
+    },
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 2
+    },
+    {
+     "f": "lanG",
+     "op": ">=",
+     "v": 2.5
+    }
+   ],
+   "pref": [
+    {
+     "f": "lanPorts",
+     "op": ">=",
+     "v": 2
+    },
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "usb4",
+     "op": "==",
+     "v": true
+    }
+   ],
+   "rank": {
+    "perf": 0.3,
+    "eff": 0.2,
+    "value": 0.2,
+    "cool": 0.15,
+    "ai": 0.15
+   },
+   "nasOk": true
+  },
+  {
+   "key": "projects",
+   "ru": "Проекты и разработка",
+   "en": "Projects and development",
+   "descRu": "Docker, CI, тестовые стенды, самоделки",
+   "descEn": "Docker, CI, test beds, DIY",
+   "icon": "code",
+   "h1Ru": "Мини-ПК для проектов и разработки",
+   "h1En": "Mini PC for projects and development",
+   "whyRu": "Docker, сборка проектов, тестовые стенды, автоматизация, свои эксперименты. Нужны 16 ГБ памяти, быстрый SSD и достаточный процессор для сборки. Студенту хватает того же, но разработчику важнее запас по ОЗУ и расширяемость, а до Homelab не доходит по объёму памяти и сети.",
+   "whyEn": "Docker, project builds, test beds, automation, your own experiments. You need 16 GB of memory, a fast SSD and a CPU strong enough for builds. A student needs similar, but a developer values RAM headroom and expandability more, while falling short of a Homelab in memory and network.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 16
+    },
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 1
+    },
+    {
+     "f": "s.perf",
+     "op": ">=",
+     "v": 25
+    }
+   ],
+   "pref": [
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "ramcap",
+     "op": ">=",
+     "v": 32
+    },
+    {
+     "f": "lanG",
+     "op": ">=",
+     "v": 2.5
+    }
+   ],
+   "rank": {
+    "perf": 0.35,
+    "value": 0.25,
+    "cool": 0.15,
+    "eff": 0.15,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "daily",
+   "ru": "Ежедневные задачи",
+   "en": "Everyday tasks",
+   "descRu": "Универсальный мини-ПК на каждый день",
+   "descEn": "A universal everyday mini PC",
+   "icon": "user",
+   "h1Ru": "Мини-ПК для ежедневных задач",
+   "h1En": "Mini PC for everyday tasks",
+   "whyRu": "Универсальный вариант без специализации: почта, браузер, видео, документы, видеозвонки. Нужно, чтобы устройство работало без проблем, не грелось и стоило разумно. От офисного отличается тем, что допустимы и развлечения, и домашние дела, поэтому критерии мягче.",
+   "whyEn": "A universal pick without specialization: mail, browser, video, documents, video calls. The device should just work, stay cool and cost a sensible amount. Unlike the office use case entertainment and household tasks are fine, so criteria are softer.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 45
+    }
+   ],
+   "pref": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 16
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 80
+    }
+   ],
+   "rank": {
+    "value": 0.3,
+    "cool": 0.25,
+    "perf": 0.2,
+    "eff": 0.15,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "senior",
+   "ru": "Пенсионерам",
+   "en": "For seniors",
+   "descRu": "Просто, прохладно, надёжно",
+   "descEn": "Simple, cool, reliable",
+   "icon": "user",
+   "h1Ru": "Мини-ПК для пожилых людей",
+   "h1En": "Mini PC for older users",
+   "whyRu": "Видеозвонки с внуками, новости, видео, госуслуги, фото. Нужен простой в подключении, прохладный и малопотребляющий компьютер без сюрпризов, мощность не важна. Шум мы не измеряем, поэтому смотрим на TDP и температуру как косвенные признаки тихой работы. От школьника отличается упором на простоту, а не на игры и обучение.",
+   "whyEn": "Video calls with grandchildren, news, video, public services, photos. It should be easy to connect, cool and low-power with no surprises, power does not matter. We do not measure noise, so TDP and temperature serve as indirect signs of quiet running. Unlike school use the focus is simplicity, not games and learning.",
+   "req": [
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 28
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 80
+    },
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    }
+   ],
+   "pref": [
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 1
+    }
+   ],
+   "rank": {
+    "cool": 0.4,
+    "eff": 0.25,
+    "value": 0.2,
+    "avail": 0.15
+   }
+  },
+  {
+   "key": "egpu",
+   "ru": "Под внешнюю видеокарту",
+   "en": "For an external GPU",
+   "descRu": "OCuLink или USB4 для eGPU",
+   "descEn": "OCuLink or USB4 for an eGPU",
+   "icon": "plug",
+   "h1Ru": "Мини-ПК для внешней видеокарты (eGPU)",
+   "h1En": "Mini PC for an external graphics card (eGPU)",
+   "whyRu": "Видеокарта подключается через OCuLink (PCIe 4.0 x4, почти без потерь) или USB4 (до 40 Гбит/с, потери больше). Процессор должен быть достаточно сильным, чтобы не ограничивать видеокарту. Для игр на встроенной графике этот порт не нужен, поэтому критерий отдельный.",
+   "whyEn": "A graphics card connects through OCuLink (PCIe 4.0 x4, almost no loss) or USB4 (up to 40 Gbit/s, more loss). The CPU must be strong enough not to hold the card back. For gaming on integrated graphics this port is not needed, hence a separate criterion.",
+   "req": [
+    {
+     "f": "egpu",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "s.perf",
+     "op": ">=",
+     "v": 30
+    }
+   ],
+   "pref": [
+    {
+     "f": "oculink",
+     "op": "==",
+     "v": true
+    }
+   ],
+   "rank": {
+    "perf": 0.5,
+    "value": 0.25,
+    "cool": 0.15,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "router",
+   "ru": "Роутер и файрвол",
+   "en": "Router and firewall",
+   "descRu": "OPNsense, pfSense, VPN",
+   "descEn": "OPNsense, pfSense, VPN",
+   "icon": "router",
+   "h1Ru": "Мини-ПК как роутер и файрвол",
+   "h1En": "Mini PC as a router and firewall",
+   "whyRu": "OPNsense, pfSense, VPN-шлюз. Нужно минимум два сетевых порта, лучше 2,5 Гбит/с, и низкое потребление, ведь работает круглосуточно. Процессору хватает слабого. Домашнему серверу достаточно одного порта, а здесь несколько портов обязательны.",
+   "whyEn": "OPNsense, pfSense, a VPN gateway. You need at least two network ports, ideally 2.5 Gbit/s, and low consumption because it runs 24/7. A weak CPU is enough. A home server is fine with one port, here several ports are a must.",
+   "req": [
+    {
+     "f": "lanPorts",
+     "op": ">=",
+     "v": 2
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 28
+    }
+   ],
+   "pref": [
+    {
+     "f": "lanG",
+     "op": ">=",
+     "v": 2.5
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 75
+    }
+   ],
+   "rank": {
+    "eff": 0.4,
+    "cool": 0.3,
+    "value": 0.2,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "nvr",
+   "ru": "Видеонаблюдение",
+   "en": "Video surveillance",
+   "descRu": "Запись с камер: Frigate, Blue Iris",
+   "descEn": "Camera recording: Frigate, Blue Iris",
+   "icon": "camera",
+   "h1Ru": "Мини-ПК для видеонаблюдения",
+   "h1En": "Mini PC for video surveillance",
+   "whyRu": "Запись и анализ потока с камер (Frigate, Blue Iris). Нужно место для дисков (несколько слотов SSD или отсеков), круглосуточная работа и видеоядро или NPU для распознавания. От обычного сервера отличается упором на объём хранилища.",
+   "whyEn": "Recording and analysing camera streams (Frigate, Blue Iris). You need room for drives (several SSD slots or bays), round-the-clock operation and a GPU or NPU for detection. Unlike a normal server the focus is storage capacity.",
+   "req": [
+    {
+     "f": "storslots",
+     "op": ">=",
+     "v": 2
+    },
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 45
+    }
+   ],
+   "pref": [
+    {
+     "f": "s.gfx",
+     "op": ">=",
+     "v": 20
+    },
+    {
+     "f": "npu",
+     "op": ">=",
+     "v": 10
+    },
+    {
+     "f": "lanG",
+     "op": ">=",
+     "v": 2.5
+    }
+   ],
+   "rank": {
+    "eff": 0.3,
+    "cool": 0.25,
+    "perf": 0.2,
+    "value": 0.15,
+    "avail": 0.1
+   },
+   "nasOk": true
+  },
+  {
+   "key": "smarthome",
+   "ru": "Умный дом",
+   "en": "Smart home",
+   "descRu": "Home Assistant и автоматизация",
+   "descEn": "Home Assistant and automation",
+   "icon": "home",
+   "h1Ru": "Мини-ПК для умного дома",
+   "h1En": "Mini PC for a smart home",
+   "whyRu": "Home Assistant, Zigbee и Z-Wave, автоматизации, видеодомофон. Нагрузка небольшая, но устройство включено всегда и должно быть экономичным и надёжным. Хватает слабого процессора и 4 до 8 ГБ памяти, всё мощнее будет излишеством и тратой электричества.",
+   "whyEn": "Home Assistant, Zigbee and Z-Wave, automations, video doorbell. The load is small, but the device is always on and must be efficient and reliable. A weak CPU and 4 to 8 GB of memory suffice, anything stronger is excess and wasted electricity.",
+   "req": [
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 20
+    },
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 4
+    }
+   ],
+   "pref": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 75
+    }
+   ],
+   "rank": {
+    "eff": 0.45,
+    "cool": 0.3,
+    "value": 0.25
+   }
+  },
+  {
+   "key": "creator",
+   "ru": "Монтаж и творчество",
+   "en": "Editing and creative work",
+   "descRu": "Видеомонтаж, 3D, фото",
+   "descEn": "Video editing, 3D, photo",
+   "icon": "film",
+   "h1Ru": "Мини-ПК для монтажа и творчества",
+   "h1En": "Mini PC for editing and creative work",
+   "whyRu": "Видеомонтаж, 3D, обработка фото и RAW. Нужны сильный процессор, мощное видеоядро, 32 ГБ памяти и быстрый SSD. Студенту для лёгкого монтажа хватает 16 ГБ, а проектный монтаж 4K требует запаса памяти и охлаждения, иначе производительность проседает.",
+   "whyEn": "Video editing, 3D, photo and RAW processing. You need a strong CPU, a powerful GPU, 32 GB of memory and a fast SSD. A student needs 16 GB for light editing, but 4K project work demands memory headroom and cooling or performance drops.",
+   "req": [
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 32
+    },
+    {
+     "f": "s.perf",
+     "op": ">=",
+     "v": 50
+    },
+    {
+     "f": "s.gfx",
+     "op": ">=",
+     "v": 30
+    }
+   ],
+   "pref": [
+    {
+     "f": "ramUp",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "usb4",
+     "op": "==",
+     "v": true
+    },
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 2
+    }
+   ],
+   "rank": {
+    "perf": 0.35,
+    "gfx": 0.3,
+    "cool": 0.15,
+    "value": 0.1,
+    "avail": 0.1
+   }
+  },
+  {
+   "key": "kiosk",
+   "ru": "Касса и киоск",
+   "en": "POS and kiosk",
+   "descRu": "Касса, вывеска, киоск, терминал",
+   "descEn": "Till, signage, kiosk, terminal",
+   "icon": "store",
+   "h1Ru": "Мини-ПК для кассы, киоска и вывески",
+   "h1En": "Mini PC for a till, kiosk and signage",
+   "whyRu": "Касса, цифровая вывеска, информационный экран, терминал: работает много часов подряд, часто в закрытом корпусе. Важны экономичность, прохладная работа и доступность, мощность вторична. От офисного отличается режимом 24/7 и жёсткими условиями размещения.",
+   "whyEn": "A till, digital signage, an information screen, a terminal: it runs for many hours, often in an enclosed case. Efficiency, cool running and availability matter, power is secondary. Unlike the office case it runs 24/7 in tougher placement conditions.",
+   "req": [
+    {
+     "f": "tdp",
+     "op": "<=",
+     "v": 28
+    },
+    {
+     "f": "temp",
+     "op": "<=",
+     "v": 80
+    },
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 4
+    }
+   ],
+   "pref": [
+    {
+     "f": "ssd",
+     "op": ">=",
+     "v": 1
+    },
+    {
+     "f": "ram",
+     "op": ">=",
+     "v": 8
+    }
+   ],
+   "rank": {
+    "cool": 0.35,
+    "eff": 0.3,
+    "avail": 0.2,
+    "value": 0.15
+   }
+  }
+ ],
+ "classes": {
+  "power": {
+   "mid": 25,
+   "strong": 50,
+   "top": 75
+  },
+  "temp": {
+   "cool": 70,
+   "warm": 85
+  }
+ },
+ "aiModels": [
+  {
+   "b": 7,
+   "gb": 6
+  },
+  {
+   "b": 14,
+   "gb": 10
+  },
+  {
+   "b": 32,
+   "gb": 21
+  },
+  {
+   "b": 70,
+   "gb": 43
+  },
+  {
+   "b": 120,
+   "gb": 75
+  }
+ ],
+ "_comment": "Критерии, пороги и список бенчмарков. Из metrics строятся столбцы сравнения, страница методики и форма в админке.",
+ "metrics": [
+  {
+   "k": "pm_total",
+   "ru": "PassMark PerformanceTest, общий балл",
+   "en": "PassMark PerformanceTest, total",
+   "u": "pts",
+   "group": "cpu",
+   "hi": 1,
+   "core": true,
+   "hr": "PassMark PerformanceTest 11, итоговый PassMark Rating.",
+   "he": "PassMark PerformanceTest 11, overall PassMark Rating."
+  },
+  {
+   "k": "pm_cpu",
+   "ru": "PassMark CPU Mark",
+   "en": "PassMark CPU Mark",
+   "u": "pts",
+   "group": "cpu",
+   "hi": 1,
+   "core": true,
+   "hr": "Подтест CPU Mark из PerformanceTest 11.",
+   "he": "CPU Mark subtest of PerformanceTest 11."
+  },
+  {
+   "k": "pm_3d",
+   "ru": "PassMark 3D Graphics Mark",
+   "en": "PassMark 3D Graphics Mark",
+   "u": "pts",
+   "group": "gfx",
+   "hi": 1,
+   "core": false,
+   "hr": "Подтест 3D Graphics Mark из PerformanceTest 11.",
+   "he": "3D Graphics Mark subtest of PerformanceTest 11."
+  },
+  {
+   "k": "cb23",
+   "ru": "Cinebench R23, multi-core",
+   "en": "Cinebench R23, multi-core",
+   "u": "pts",
+   "group": "cpu",
+   "hi": 1,
+   "core": true,
+   "hr": "Cinebench R23, многоядерный тест, 10 минут по умолчанию.",
+   "he": "Cinebench R23, multi-core, default 10 minutes."
+  },
+  {
+   "k": "cpuz_s",
+   "ru": "CPU-Z Bench, 1 поток",
+   "en": "CPU-Z Bench, single thread",
+   "u": "pts",
+   "group": "cpu",
+   "hi": 1,
+   "core": false,
+   "hr": "Встроенный бенчмарк CPU-Z, один поток.",
+   "he": "CPU-Z built-in benchmark, single thread."
+  },
+  {
+   "k": "cpuz_m",
+   "ru": "CPU-Z Bench, многопоток",
+   "en": "CPU-Z Bench, multi thread",
+   "u": "pts",
+   "group": "cpu",
+   "hi": 1,
+   "core": false,
+   "hr": "Встроенный бенчмарк CPU-Z, все потоки.",
+   "he": "CPU-Z built-in benchmark, all threads."
+  },
+  {
+   "k": "gb6",
+   "ru": "Geekbench 6, multi-core",
+   "en": "Geekbench 6, multi-core",
+   "u": "pts",
+   "group": "cpu",
+   "hi": 1,
+   "core": false,
+   "hr": "Geekbench 6, многоядерный результат.",
+   "he": "Geekbench 6, multi-core score."
+  },
+  {
+   "k": "pcmark10",
+   "ru": "PCMark 10, общий балл",
+   "en": "PCMark 10, overall",
+   "u": "pts",
+   "group": "cpu",
+   "hi": 1,
+   "core": false,
+   "hr": "Офисная производительность, итоговый балл PCMark 10.",
+   "he": "Office performance, PCMark 10 overall score."
+  },
+  {
+   "k": "sn_light",
+   "ru": "3DMark Steel Nomad Light",
+   "en": "3DMark Steel Nomad Light",
+   "u": "pts",
+   "group": "gfx",
+   "hi": 1,
+   "core": true,
+   "hr": "Графика встроенного видеоядра.",
+   "he": "Integrated GPU graphics score."
+  },
+  {
+   "k": "timespy",
+   "ru": "3DMark Time Spy, графика",
+   "en": "3DMark Time Spy, graphics",
+   "u": "pts",
+   "group": "gfx",
+   "hi": 1,
+   "core": false,
+   "hr": "Графическая часть Time Spy, для мощных iGPU.",
+   "he": "Time Spy graphics score, for stronger iGPUs."
+  },
+  {
+   "k": "storage3d",
+   "ru": "3DMark Storage Benchmark",
+   "en": "3DMark Storage Benchmark",
+   "u": "pts",
+   "group": "storage",
+   "hi": 1,
+   "core": false,
+   "hr": "Итоговый балл накопителя в 3DMark.",
+   "he": "3DMark storage overall score."
+  },
+  {
+   "k": "cdm_r",
+   "ru": "CrystalDiskMark, последовательное чтение",
+   "en": "CrystalDiskMark, sequential read",
+   "u": "MB/s",
+   "group": "storage",
+   "hi": 1,
+   "core": true,
+   "hr": "SEQ1M Q8T1 или стандартный профиль, указывайте в источнике.",
+   "he": "SEQ1M Q8T1 or the default profile, note it in the source."
+  },
+  {
+   "k": "cdm_w",
+   "ru": "CrystalDiskMark, последовательная запись",
+   "en": "CrystalDiskMark, sequential write",
+   "u": "MB/s",
+   "group": "storage",
+   "hi": 1,
+   "core": true,
+   "hr": "Те же настройки, что и для чтения.",
+   "he": "Same settings as for reading."
+  },
+  {
+   "k": "mem_r",
+   "ru": "AIDA64, чтение памяти",
+   "en": "AIDA64, memory read",
+   "u": "GB/s",
+   "group": "mem",
+   "hi": 1,
+   "core": false,
+   "hr": "Тест Cache & Memory Benchmark, чтение.",
+   "he": "Cache & Memory Benchmark, read."
+  },
+  {
+   "k": "llm",
+   "ru": "Локальная LLM, генерация",
+   "en": "Local LLM generation",
+   "u": "tok/s",
+   "group": "ai",
+   "hi": 1,
+   "core": true,
+   "hr": "Одна и та же модель 8B в Q4_K_M, контекст 4096, LM Studio, один и тот же запрос.",
+   "he": "The same 8B model in Q4_K_M, 4096 context, LM Studio, identical prompt."
+  }
+ ]
+}
