@@ -25,22 +25,28 @@
   ls.set('mpb-lang', document.documentElement.lang);
 
   // копирование
-  function copyText(t, btn) {
-    var done = function (ok) { if (!btn) return; var o = btn.getAttribute('data-o') || btn.textContent; btn.setAttribute('data-o', o); btn.textContent = ok ? T.copied : T.copyFail; setTimeout(function () { btn.textContent = o; }, 1800); };
+  function copyText(t, btn, success, failure) {
+    var done = function (ok) { if (!btn) return; var o = btn.getAttribute('data-o') || btn.textContent; btn.setAttribute('data-o', o); btn.textContent = ok ? success : failure; setTimeout(function () { btn.textContent = o; }, 1800); };
     if (!t) return;
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { done(true); }, function () { done(false); }); else done(false);
   }
-  $$('[data-copy]').forEach(function (b) { b.addEventListener('click', function () { copyText(b.getAttribute('data-copy'), b); }); });
 
-  // контакты
   var build = $('#build');
   if (build) {
     build.addEventListener('click', function () {
-      var v = function (id) { return ($('#c-' + id).value || '').trim() || '—'; };
-      var m = ($('#c-msg').value || '').trim();
-      $('#c-out').value = T.msg.replace('{name}', v('name')).replace('{model}', v('model')).replace('{country}', v('country')).replace('{msg}', m);
+      var fields = {};
+      ['name', 'model', 'country', 'msg'].forEach(function (id) {
+        fields[id] = $('#c-' + id).value.trim();
+      });
+      $('#c-out').value = T.msg.replace(/\{(name|model|country|msg)\}/g, function (_, key) {
+        return fields[key] || (key === 'msg' ? '' : '—');
+      });
     });
-    $('#copyout').addEventListener('click', function () { copyText($('#c-out').value, $('#copyout')); });
+    var copyout = $('#copyout');
+    copyout.addEventListener('click', function () {
+      var ru = document.documentElement.lang === 'ru';
+      copyText($('#c-out').value, copyout, ru ? 'Текст скопирован' : 'Message copied', ru ? 'Выделите и скопируйте текст' : 'Select and copy the message');
+    });
   }
 
   /* ---------- сравнение (localStorage) ---------- */
@@ -70,12 +76,11 @@
     cmpClear.hidden = !cmp.length;
     var list = cmp.map(function (slug) { return bySlug[slug]; });
     if (list.length < 2) { cmpBox.innerHTML = '<div class="empty">' + (list.length ? T.cmpOne : T.cmpEmpty) + '</div>'; return; }
-    var rows = [['CPU', 'cpu'], ['GPU', 'gpu'], ['RAM, GB', 'ram', 1], ['PassMark', 'pm_total', 1], ['PassMark CPU', 'pm_cpu', 1], ['Cinebench R23', 'cb23', 1], ['Steel Nomad Light', 'sn_light', 1], ['SSD read MB/s', 'cdm_r', 1], ['LLM tok/s', 'llm', 1], ['TDP, W', 'tdp', -1], ['CPU °C', 'temp', -1], ['$', 'price', -1], [T.score, 's', 1]];
     var h = '<table><thead><tr><td></td>' + list.map(function (d) {
       return '<th scope="col"><a href="' + esc(d.url) + '">' + esc(d.name) + '</a>' + (d.demo ? ' <span class="tag">' + T.demo + '</span>' : '') + '</th>';
     }).join('') + '</tr></thead><tbody>';
     var hasDemo = list.some(function (d) { return d.demo; });
-    rows.forEach(function (r) {
+    T.cmpRows.forEach(function (r) {
       var vals = list.map(function (d) { return r[1] === 's' ? d.s.overall : d[r[1]]; });
       if (vals.every(function (value) { return value == null || value === ''; })) return;
       var nums = vals.filter(isN);
@@ -116,7 +121,7 @@
       var link = new URL(location.pathname, location.origin);
       cmp.forEach(function (slug) { link.searchParams.append('cmp', slug); });
       link.hash = 'compare';
-      copyText(link.href, cmpShare);
+      copyText(link.href, cmpShare, T.copied, T.copyFail);
     });
     refreshCmp();
   }
@@ -141,7 +146,7 @@
     var filters = $('#fp');
     if (matchMedia('(max-width: 700px)').matches && !params.has('q') && !params.has('flag') && !params.has('use')) filters.open = false;
     var catKeys = Object.keys(T.cats || {});
-    var infoOf = function (k, d) { return d.s[k] + '/100'; };
+    var infoOf = function (k, d) { return k === 'cool' ? format.format(d.temp) + ' °C' : d.s[k] + '/100'; };
     function weighted(d) {
       var tot = 0, sum = 0; Object.keys(W).forEach(function (k) { if (d.s[k] == null) return; tot += W[k]; sum += W[k] * d.s[k]; });
       return tot ? Math.round(sum / tot) : -1;
@@ -267,7 +272,14 @@
   if (page === 'ai') {
     var need = 0;
     function applyAi() {
-      var vis = {}, n = 0; DEV.forEach(function (d) { var el = cardEl[d.slug]; if (!el) return; var ok = !need || (d.vram || 0) >= need; el.hidden = !ok; vis[d.slug] = ok; if (ok) n++; });
+      var n = 0;
+      DEV.forEach(function (d) {
+        var el = cardEl[d.slug];
+        if (!el) return;
+        var ok = !need || (isN(d.vram) && d.vram >= need);
+        el.hidden = !ok;
+        if (ok) n++;
+      });
       var none = $('#none'); if (none) none.hidden = n > 0 || !Object.keys(cardEl).length;
       var c = $('#aicount'); if (c) c.textContent = T.found + n + T.of + Object.keys(cardEl).length;
     }
@@ -288,7 +300,7 @@
       var list = nasList.filter(function (d) { return (d.bays || 0) >= nf.bays && (d.lanG || 0) >= nf.lan; });
       list.forEach(function (d) { vis[d.slug] = 1; });
       var val = function (d) { return key === 'bays' ? -(d.bays || 0) : key === 'lan' ? -(d.lanG || 0) : isN(d[key]) ? d[key] : 1e9; };
-      var ordered = list.sort(function (a, b) { return val(a) - val(b); }).concat(nasList.filter(function (d) { return !vis[d.slug]; }));
+      var ordered = list.sort(function (a, b) { return Number(a.demo) - Number(b.demo) || val(a) - val(b); }).concat(nasList.filter(function (d) { return !vis[d.slug]; }));
       var n = showCards(vis, ordered);
       var c = $('#nascount'); if (c) c.textContent = T.found + n + T.of + nasList.length;
     }

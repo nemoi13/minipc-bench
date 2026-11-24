@@ -52,7 +52,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 .hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:44px 24px}
 .hero-copy{padding-block:16px}
 .eyebrow{font:600 .8125rem "Golos Text",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.13em;color:var(--acc);margin-bottom:14px}
-.hero h1{font-size:clamp(39px,5.1vw,78px);line-height:1.06;letter-spacing:-.07em;text-wrap:initial;max-width:11ch}
+.hero h1{font-size:clamp(39px,5.1vw,78px);line-height:1.06;letter-spacing:-.07em;text-wrap:balance;max-width:13ch}
 .hero h1 span{color:var(--hot)}
 .lead{font-size:1.125rem;color:var(--mut);max-width:61ch;margin-top:14px}
 .hero .lead{margin-top:21px;max-width:39ch}
